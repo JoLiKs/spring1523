@@ -12,9 +12,9 @@
             height: 150px;
             position: relative;
             display: block;
-            background-color: #8e8a83;
+            background-color: aquamarine;
             border-radius: 10px;
-            background-image: url("cat1.png");
+            background-image: url("Htors.png");
             background-size: cover;
         }
     </style>
@@ -45,7 +45,7 @@
     window.onload = () => {
         function setPos() {
             const starCountRef = ref(database);
-            get(child(starCountRef, `Cat1/`)).then((snapshot) => {
+            get(child(starCountRef, `Htors/`)).then((snapshot) => {
                 if (snapshot.exists()) {
                     b.style.left = snapshot.val().posX;
                     b.style.top = snapshot.val().posY;
@@ -75,7 +75,7 @@ if (e.pageX-parseInt(b.style.left) != 75 || e.pageY-parseInt(b.style.top) != 75)
                     // console.log(onb)
                     b.style.left = e.clientX - 75 + "px"
                     b.style.top = e.clientY - 75 + "px"
-                    set(ref(database, 'Cat1'), {
+                    set(ref(database, 'Htors'), {
                         posX: b.style.left,
                         posY: b.style.top
                     });
